@@ -58,13 +58,13 @@ export default class QueryHandler {
         discount: 1,
       },
     };
-    const sort = SORT_OPTIONS[String(this.query.sort)];
+    const sortOption = SORT_OPTIONS[String(this.query.sort)];
 
-    if (!sort) {
+    if (this.query.sort && !sortOption) {
       throw new HttpException('Incorrect sort option', 400);
     }
 
-    return sort;
+    return sortOption;
   }
 
   pagination(defaultLimit = 20) {
