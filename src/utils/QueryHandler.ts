@@ -52,10 +52,10 @@ export default class QueryHandler {
         rating: 1,
       },
       dicountASC: {
-        discount: -1,
+        discountPercentage: -1,
       },
       discountDESC: {
-        discount: 1,
+        discountPercentage: 1,
       },
     };
     const sortOption = SORT_OPTIONS[String(this.query.sort)];
